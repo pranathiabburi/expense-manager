@@ -21,4 +21,5 @@ public class ExpenseController {
     public Expense addExpense(@RequestBody Expense expense) {
         return repository.save(expense);
     }
+
 }
