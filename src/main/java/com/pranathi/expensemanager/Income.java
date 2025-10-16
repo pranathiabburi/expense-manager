@@ -1,4 +1,4 @@
-package com.pranathi.expense_manager;
+package com.pranathi.expensemanager;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.pranathi.expense_manager;
+package com.pranathi.expensemanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

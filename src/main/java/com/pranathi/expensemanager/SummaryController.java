@@ -1,4 +1,4 @@
-package com.pranathi.expense_manager;
+package com.pranathi.expensemanager;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

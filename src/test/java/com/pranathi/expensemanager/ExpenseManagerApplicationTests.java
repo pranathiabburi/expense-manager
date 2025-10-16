@@ -1,4 +1,4 @@
-package com.pranathi.expense_manager;
+package com.pranathi.expensemanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

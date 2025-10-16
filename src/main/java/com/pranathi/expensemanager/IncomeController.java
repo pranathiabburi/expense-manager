@@ -1,4 +1,4 @@
-package com.pranathi.expense_manager;
+package com.pranathi.expensemanager;
 
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -29,7 +29,7 @@ public class IncomeController {
                     income.setAmount(updatedIncome.getAmount());
                     return repository.save(income);
                 })
-                .orElseThrow(() -> new RuntimeException("Income not found with id " + id));
+                .orElseThrow(() ->  new ResourceNotFoundException("Expense not found with id " + id));
     }
 
     @DeleteMapping("/{id}")
