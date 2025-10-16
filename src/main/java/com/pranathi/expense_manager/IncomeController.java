@@ -21,4 +21,23 @@ public class IncomeController {
     public Income addIncome(@RequestBody Income income) {
         return repository.save(income);
     }
+    @PutMapping("/{id}")
+    public Income updateIncome(@PathVariable Long id, @RequestBody Income updatedIncome) {
+        return repository.findById(id)
+                .map(income -> {
+                    income.setSource(updatedIncome.getSource());
+                    income.setAmount(updatedIncome.getAmount());
+                    return repository.save(income);
+                })
+                .orElseThrow(() -> new RuntimeException("Income not found with id " + id));
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteIncome(@PathVariable Long id) {
+        if (!repository.existsById(id)) {
+            throw new RuntimeException("Income not found with id " + id);
+        }
+        repository.deleteById(id);
+    }
+
 }
